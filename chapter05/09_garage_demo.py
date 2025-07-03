@@ -23,18 +23,8 @@ def remove_car_from_garage(garage: deque) -> None:
     else:
         print("Garage is empty. No cars to remove.")
 
-#--------------------------
-import time
-def textDelay():
-    time.sleep(0.5)
-    print()
-#--------------------------
-    
-
 def main():
-    #TODO: na to kanw na afairei to amaksi pou thelw. me dict extra: na mporww na kalesw to amaksi kai apo th thesi kai apo thn pinakida (logika tha xrhsimpoeisw to idio dict kai tha to kalw diaforetika)!
     garage = deque()
-
 
     while True:
         print("\nChoose an opperation:")
@@ -48,8 +38,6 @@ def main():
         except ValueError:
             print("Invalid input.")
             continue
-
-        textDelay()
         
         match choice:
             case 1:
@@ -63,10 +51,6 @@ def main():
                 break
             case _:
                 "Invalid choice. Please try again"
-
-        textDelay()
-
-
 
 if __name__ == "__main__":
     main()
