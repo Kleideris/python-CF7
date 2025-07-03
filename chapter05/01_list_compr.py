@@ -16,7 +16,7 @@ sq_nums_func = [squared_function(num) for num in list_of_ints if num < 5]
 print(sq_nums_func)
 
 # 4. 'square function and map'
-sq_map_func = list(map(sq_map_func, list_of_ints))
+sq_map_func = list(map(sq_nums_func, list_of_ints))
 print(sq_map_func)
 
 # 5 filter and square only with list comp
