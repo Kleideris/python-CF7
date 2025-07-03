@@ -6,11 +6,12 @@ def enroll_students(*students, min_grade=50, department="Computer Science", **kw
     for student in students:
         print(f" - {student}")
 
-    print("\nAdditional information")
-    # TODO if gia na emfanizontai mono otan yparxoun
-    for key, value in kwargs.items():
-        print(f"{key}: {value}")
-    print("---End of enrollment---")
+    if kwargs:
+        print("\nAdditional information")
+    
+        for key, value in kwargs.items():
+            print(f"{key}: {value}")
+        print("---End of enrollment---")
 
 def main():
     enroll_students("Chris", "Marinos")
