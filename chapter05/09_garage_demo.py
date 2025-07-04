@@ -19,8 +19,9 @@ def add_car_to_garage(garage: dict[str, str], max_capacity: int) -> None:
     except ValueError:
         print("Invalid format. Please enter the plate and car name separated by a comma.")
 
-    if not plate or not car_name:
+    if not plate.strip() or not car_name.strip():
          print("Both plate and name are required.")
+         return
     
     if plate in garage:
         print(f"Plate {plate} already exists.")
