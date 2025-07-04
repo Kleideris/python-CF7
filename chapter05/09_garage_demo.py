@@ -4,7 +4,7 @@ def display_garage(garage: dict[str, str]) -> None:
     if garage:
         print("Current cars in the garage:")
         for plate, car in garage.items():
-            print(f"Plate: {plate} — Car: {car}")
+            print(f"{plate:7} — Car: {car}")
     else:
         print("The garage is empty")
 
@@ -38,12 +38,28 @@ def remove_car_from_garage(garage: dict[str, str], plate: str) -> None:
         car_left = garage.pop(plate)
         print(f"{car_left} with plate {plate} has left the garage.")
     else:
-        print(f"There are no cars in the garage with plate '{plate}'.")        
+        print(f"There are no cars in the garage with plate '{plate}'.")
+
+
+
+def get_garage(use_defaults=False):
+    """
+    Initializes the garage with defaults car for testing purposes.
+
+    Params:
+        use_defaults (bool): Whether to include the DEFAULT_CARS preset.
+
+    Returns:
+        dict: a copy of DEFAULT_CARS if use_defaults is True, otherwise an empty dict.
+    """
+    DEFAULT_CARS = {"XXX1234": "toyota", "YYY5678": "mini cooper"}
+    return DEFAULT_CARS.copy() if use_defaults else {}
+
 
 def main():
-    garage = {"XXX123": "toyota", "YYY456": "mini cooper"}
-    max_capacity = 100
-
+    MAX_CAPACITY = 100
+    garage = get_garage(use_defaults=True)
+    
     while True:
         print("\nChoose an operation:")
         print("1. Display garage")
@@ -61,7 +77,7 @@ def main():
             case 1:
                 display_garage(garage)
             case 2:
-                add_car_to_garage(garage, max_capacity)
+                add_car_to_garage(garage, MAX_CAPACITY)
             case 3:
                 plate = input("Enter the plate of the car you want to remove: ").strip()
                 remove_car_from_garage(garage, plate)
