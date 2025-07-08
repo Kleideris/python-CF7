@@ -1,0 +1,22 @@
+2025-07-07 19:39:50,448:ERROR:search-app2:Item Chris not found in the list. Error: 'Chris' is not in list
+Traceback (most recent call last):
+  File "C:\Users\kleid\Desktop\Coding Factory\Python\cf7-python\chapter05\18_logging\18_logging_extra.py", line 82, in search_item
+    index = items.index(item_to_find)
+ValueError: 'Chris' is not in list
+2025-07-07 19:40:15,533:INFO:search-app2:Item Charlie found at index 2
+2025-07-07 19:40:27,118:ERROR:search-app2:Item  not found in the list. Error: '' is not in list
+Traceback (most recent call last):
+  File "C:\Users\kleid\Desktop\Coding Factory\Python\cf7-python\chapter05\18_logging\18_logging_extra.py", line 82, in search_item
+    index = items.index(item_to_find)
+ValueError: '' is not in list
+2025-07-07 19:40:55,607:ERROR:search-app2:Item [] not found in the list. Error: [] is not in list
+Traceback (most recent call last):
+  File "C:\Users\kleid\Desktop\Coding Factory\Python\cf7-python\chapter05\18_logging\18_logging_extra.py", line 82, in search_item
+    index = items.index(item_to_find)
+ValueError: [] is not in list
+2025-07-07 19:42:09,024:ERROR:search-app2:Item None not found in the list. Error: None is not in list
+Traceback (most recent call last):
+  File "C:\Users\kleid\Desktop\Coding Factory\Python\cf7-python\chapter05\18_logging\18_logging_extra.py", line 82, in search_item
+    index = items.index(item_to_find)
+ValueError: None is not in list
+2025-07-07 19:42:35,376:WARNING:search-app2:List is empty
