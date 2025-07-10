@@ -24,7 +24,16 @@ def main():
     p = Person("Nick")
     print(p.name)
     p.name = "Jhon"
-    pass
+    
+    del p.name
+    print(p.name)
+
+    p.friends = []
+    p.friends.append("Chris")
+    p.friends.append("Ioannis")
+
+    for friend in p.friends:
+        print(f" - {friend}")
 
 if __name__ == "__main__":
     main()
