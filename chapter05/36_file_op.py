@@ -43,7 +43,7 @@ def create_file(file_path, content):
     except IOError as e:
         print(f"Error creating file {file_path}: {e}")   
 
-def update_fle(file_path, content):
+def update_file(file_path, content):
     if not os.path.isfile(file_path):
             print(f"Error: {file_path} does not exist")
             return None
@@ -66,8 +66,18 @@ def delete_file(file_path):
         print(f"Error deletin file {file_path}: {e}")
 
 def main():
-    create_file("Example.txt", "Hello Coding Factory 7")
-    print()
+    # create_file("Example.txt", "Hello Coding Factory 7")
+    # print()
 
-    print("Reading my file")
-    read_file()
+    # print("Reading my file")
+    # read_file("example.txt")
+
+    # print("Updating my file")
+    # update_file("example.txt", "This is the appended content\n")
+
+    delete_file("Deleting my file")
+    delete_file("example.txt")
+
+
+if __name__ == "__main__":
+    main()
