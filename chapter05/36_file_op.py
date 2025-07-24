@@ -78,5 +78,6 @@ def main():
     delete_file("Deleting my file")
     delete_file("example.txt")
 
+
 if __name__ == "__main__":
     main()
